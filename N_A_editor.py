@@ -9,6 +9,7 @@ from os import path
 import shutil
 import binascii
 import chips_UI
+import items_UI
 
 class SaveGame:
     def __init__(self, path):
@@ -173,6 +174,15 @@ class Interface(tk.Frame):
                 chips_UI.ChipsManagerUI(original_data.original, replace_data)
                 save_button.config(state=tk.NORMAL)
             tk.Button(saveframe, text="Edit Chips", command=curry(on_inventory_clicked, save_button, data)).grid(row=5, column=1, sticky=FILL)
+
+
+            # items
+            def on_item_clicked(save_button, original_data):
+                def replace_data(new_data):
+                    original_data.original = new_data
+                items_UI.ItemsManagerUI(original_data.original, replace_data)
+                save_button.config(state=tk.NORMAL)
+            tk.Button(saveframe, text="Edit Items", command=curry(on_item_clicked, save_button, data)).grid(row=6, column=1, sticky=FILL)
 
 
 def main():
