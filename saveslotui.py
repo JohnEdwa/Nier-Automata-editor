@@ -2,6 +2,7 @@ from PyQt5.QtWidgets import QWidget
 from PyQt5.QtGui import QIntValidator
 from ui_saveslotui import Ui_saveedit
 from itemsui import ItemsManagerUI
+from chipsui import ChipsManagerUI
 import binascii
 
 
@@ -61,8 +62,13 @@ class SaveSlotUi(QWidget):
         self._savedata.save()
         self.ui.saveButton.setEnabled(False)
 
-    def on_chip_clicked(self): 
-        pass
+    def on_chip_clicked(self):
+        chips_widget = ChipsManagerUI(
+            parent=self, savedata=self._savedata.original)
+        if chips_widget.exec_() == 1:
+            self._savedata.original = chips_widget.get_save_data()
+            self.ui.saveButton.setEnabled(True)
+        chips_widget.destroy()
 
     def on_item_clicked(self):
         items_widget = ItemsManagerUI(
