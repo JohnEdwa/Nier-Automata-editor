@@ -530,3 +530,51 @@ Level - Minimum size (diamond mark):
 
 
 ## Weapons
+Start: 0x31D70
+
+Format: ID (4 bytes) Level (4 bytes) NEW! item (4 bytes) NEW! Story (4 bytes) Enemies Defeated (4 bytes)
+Weapon slots are in order from 0x31D70 onwards (e.g. Beastbane should go to slot 3, starting from 0x31D98)
+
+Example:  Virtuous Contract, Level 4, Old Item, New weapon story, 38 Enemies defeated
+0x31DFC: 	2E 04 00 00 04 00 00 00 00 00 00 00 01 00 00 00 26 00 00 00
+
+
+**Faith** EB 03 00 00
+**Iron Pipe** F5 03 00 00
+**Beastbane** FC 03 00 00
+**Phoenix Dagger** 10 04 00 00
+**Ancient Overlord** 06 04 00 00
+**Type-40 Sword** 1A 04 00 00
+**Type-3 Sword** 24 04 00 00
+**Virtuous Contract** 2E 04 00 00
+**Cruel Oath** 2F 04 00 00
+**YoRHa-issue Blade** 38 04 00 00
+**Machine Sword** 42 04 00 00
+**Iron Will** B3 04 00 00
+**Fang of the Twins** BD 04 00 00
+**Beastlord** C4 04 00 00
+**Phoenix Sword** CE 04 00 00
+**Type-40 Blade** D8 04 00 00
+**Type-3 Blade** E2 04 00 00
+**Virtuous Treaty** EC 04 00 00
+**Cruel Blood Oath** ED 04 00 00
+**Machine Axe** F6 04 00 00
+**Phoenix Lance** 78 05 00 00
+**Beastcurse** 8C 05 00 00
+**Dragoon Lance** 96 05 00 00
+**Spear of the Usurper** A0 05 00 00
+**Type-40 Lance** AA 05 00 00
+**Type-3 Lance** B4 05 00 00
+**Virtuous Dignity** BE 05 00 00
+**Cruel Arrogance** BF 05 00 00
+**Machine Spear** C8 05 00 00
+**Angel's Folly** 68 06 00 00
+**Demon's Cry** 5E 06 00 00
+**Type-40 Fists** 4A 06 00 00
+**Type-3 Fists** 40 06 00 00
+**Virtuous Grief** 54 06 00 00
+**Cruel Lament** 55 06 00 00
+**Machine Heads** 72 06 00 00
+**Engine Blade** 53 07 00 00
+**Cypress Stick** 54 07 00 00
+**Emil Heads** 55 07 00 00
