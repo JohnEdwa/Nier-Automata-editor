@@ -191,7 +191,7 @@ class Interface(tk.Frame):
                     original_data.original = new_data
                 weapons_UI.WeaponsManagerUI(original_data.original, replace_data)
                 save_button.config(state=tk.NORMAL)
-            tk.Button(saveframe, text="Edit Weapons", command=curry(on_item_clicked, save_button, data)).grid(row=7, column=1, sticky=FILL)
+            tk.Button(saveframe, text="View Weapons", command=curry(on_item_clicked, save_button, data)).grid(row=7, column=1, sticky=FILL)
 
 
 def main():
